@@ -45,42 +45,22 @@ var makeBoxesRandom = function() {
 
 var makeBoxesGradient = function() {
 
-    var div = document.createElement("div");
-    div.style.width = '11.1%';
-    div.style.height = "100px";
-    div.style.float = "left";
-    div.style.background = "linear-gradient(to bottom, blue, white)";
-    div.style.opacity = "0.7";
-    var body = document.getElementsByTagName("body");
-
-
-    document.body.appendChild(div);
-
-    for(i = 1; i < 90; i++) {
-
-        var checkBox = document.createElement("div");
-        // give div size properties
-        checkBox.style.width = "11.1%";
-        checkBox.style.float = "left";
-        checkBox.style.paddingBottom = "11.1%";
-
-        if(i % 2 === 0){
-            // change backgroundColor to red for even numbered tiles
-            checkBox.style.backgroundColor = "DeepPink";
-            checkBox.style.opacity = "0.3";
-            checkBox.id = i;
-            div.appendChild(checkBox);
-        }
-        else {
-            // change backgroundColor to black for odd numbered tiles
-            checkBox.style.backgroundColor = "blue";
-            checkBox.style.opacity = "0.8";
-            checkBox.id = i;
-            div.appendChild(checkBox);
-        }
-    }
-
-};
+//   for (var i = 0; i < 90; i++){
+//     //creating the boxes
+//     var body = document.body.getElementsByClass('body')
+//
+//     var div = document.createElement('div');
+//     div.style.width = '11.1%';
+//     div.style.height = "100px";
+//     div.style.float = "left";
+//     var ran = '#'+Math.floor(Math.random()*16777216).toString(16);
+//     div.style.backgroundColor = ran + grad;
+//     document.body.appendChild(div);
+//
+//     var grad = "linear-gradient(to bottom, blue, white)"
+//     document.body.appendChild(body);
+//   }
+// }
 
  // var makeBoxesGradient = function(){
  //
