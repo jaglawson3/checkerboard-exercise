@@ -11,10 +11,7 @@ var makeBoxes = function() {
     var div = document.createElement('div');
     div.style.width = '11.1%';
     div.style.height = "100px";
-    div.style.float = "left";
-
-    var body = document.getElementsByTagName("body");
-    body.style.margin = '0'
+    div.style.float = "left"
 
     if(i % 2 === 0){
       // making even tiles red
@@ -47,17 +44,43 @@ var makeBoxesRandom = function() {
  };
 
 var makeBoxesGradient = function() {
-  	var parent = document.getElementsByTagName("body")[0];
-  	for (var i = 0; i<100; i++){
-  		var div = document.createElement("div");
-  		div.style.width="11.1%";
-  		div.style.float="left";
-  		div.style.paddingBottom="11.1%";
-  		div.style.height="11.1%";
-      div.style.backgroundColor="rgba(255,0,0, "+(i/100)+")";
-  		parent.appendChild(div);
-  	}
-  }
+
+    var div = document.createElement("div");
+    div.style.width = '11.1%';
+    div.style.height = "100px";
+    div.style.float = "left";
+    div.style.background = "linear-gradient(to bottom, blue, white)";
+    div.style.opacity = "0.7";
+    var body = document.getElementsByTagName("body");
+
+
+    document.body.appendChild(div);
+
+    for(i = 1; i < 90; i++) {
+
+        var checkBox = document.createElement("div");
+        // give div size properties
+        checkBox.style.width = "11.1%";
+        checkBox.style.float = "left";
+        checkBox.style.paddingBottom = "11.1%";
+
+        if(i % 2 === 0){
+            // change backgroundColor to red for even numbered tiles
+            checkBox.style.backgroundColor = "DeepPink";
+            checkBox.style.opacity = "0.3";
+            checkBox.id = i;
+            div.appendChild(checkBox);
+        }
+        else {
+            // change backgroundColor to black for odd numbered tiles
+            checkBox.style.backgroundColor = "blue";
+            checkBox.style.opacity = "0.8";
+            checkBox.id = i;
+            div.appendChild(checkBox);
+        }
+    }
+
+};
 
  // var makeBoxesGradient = function(){
  //
