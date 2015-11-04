@@ -1,6 +1,6 @@
 window.onload = function () {
 //making it show on the screen
-makeBoxesRandom();
+makeBoxesGradient();
 
 };
 
@@ -44,4 +44,16 @@ var makeBoxesRandom = function() {
      div.style.backgroundColor = ran;
      document.body.appendChild(div);
    }
+ };
+
+ var makeBoxesGradient = function(){
+
+   for (var i = 0; i < 90; i++){
+     //creating the boxes
+     var div = document.createElement('div');
+     div.style.width = '11.1%';
+     div.style.height = "100px";
+     div.style.float = "left";
+     body.style.backgroundImage = 'linear-gradient(to top, #55c6ee, #f90067)'
+
  };
